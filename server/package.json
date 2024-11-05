@@ -1,0 +1,41 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "title": "server",
+  "description": "",
+  "license": "ISC",
+  "languages": {
+    "default": "en",
+    "supported": [
+      "en",
+      "es"
+    ]
+  },
+  "modules": {
+    "path": "modules"
+  },
+  "deployment": {
+    "distributions": [
+      {
+        "name": "node",
+        "environment": "development",
+        "platform": "backend",
+        "ports": {
+          "bundles": 6571,
+          "http": 6572,
+          "inspect": 6573
+        }
+      },
+      {
+        "name": "node_test",
+        "environment": "development",
+        "ssr": "",
+        "backend": "node",
+        "platform": "web",
+        "ports": {
+          "bundles": "5033"
+        }
+      }
+    ]
+  }
+}
